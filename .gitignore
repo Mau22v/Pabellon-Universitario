@@ -1,0 +1,15 @@
+# Archivos temporales y de caché de Firebase CLI
+.firebase/
+
+# Módulos de Node (por si en el futuro usas npm)
+node_modules/
+
+# Archivos ocultos del sistema operativo (Mac/Windows)
+.DS_Store
+Thumbs.db
+
+# Variables de entorno (si llegaras a usar un archivo .env)
+.env
+
+database.rules.json
+firebase.json

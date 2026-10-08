@@ -1,0 +1,837 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+	font-family: 'Poppins', sans-serif;
+}/**/
+
+.seccion-perfil-info,
+.seccion-perfil-usuario {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    font-size: 100%;
+}
+
+.seccion-perfil-usuario .perfil-usuario-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(#3b5884, transparent);/* #B873FF, d5dbdb, 27ae60 */
+    margin-bottom: 5rem;
+
+}
+
+.seccion-perfil-usuario .perfil-usuario-portada {
+    display: block;
+    position: relative;
+    width: 1200px;/*90%*/
+    height: 350px;
+    /*background-image: linear-gradient(45deg, #16a085, #52be80); /* #BC3CFF, #317FFF)(#e5e7e9, ) *//* #16a085 */
+    border-radius: 0 0 20px 20px;
+    background-image: url(img/blog-2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+/* es estilo de boton */
+.seccion-perfil-usuario .perfil-usuario-portada .boton-portada {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border: 0;
+    border-radius: 8px;
+    padding: 12px 25px;
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+    cursor: pointer;
+    font-size: 140%;
+}
+
+.seccion-perfil-usuario .perfil-usuario-portada .boton-portada img {
+    margin: 0;
+    width: 10px;
+}
+
+/* Modifica la caja y le da sus propiedades */
+.seccion-perfil-usuario .perfil-usuario-avatar {
+    display: flex;
+    width: 180px;
+    height: 180px;
+    align-items: center;
+    justify-content: center;
+    border: 7px solid #FFFFFF;
+    background-color: #DFE5F2;
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+    position: absolute;
+    bottom: -40px;
+    /*left: calc(50% - 90px);*/
+    z-index: 1;
+}
+
+.seccion-perfil-usuario .perfil-usuario-avatar img {
+    width: 100%;
+    position: relative;
+    border-radius: 50%;
+}
+
+/* Propiedades del boton avatar y imagen */
+.seccion-perfil-usuario .perfil-usuario-avatar .boton-avatar {
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    border: 0;
+    background-color: #fff;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;/**/
+}
+
+/* delimita el tamaño maximo de las cajas */
+.seccion-perfil-info .perfil-usuario-body {
+    width: 97%;
+    position: relative;
+    gap: 10px;
+}
+
+/* solo modifica el titulo */
+.seccion-perfil-info .perfil-usuario-body .titulo {
+    display: block;
+    width: 100%;
+    font-size: 1.75em;
+    margin-bottom: 0.5rem;
+}
+
+.seccion-perfil-info .perfil-usuario-body .texto {
+    color: #848484;
+    font-size: 0.95em;
+}
+/* Edita la segunda caja, le da todo su estilo */
+.seccion-perfil-info .perfil-usuario-footer{
+    display: flex;
+    /*flex-wrap: wrap;*/
+    padding: 1.5rem 2rem;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+    background-color: #fff;
+    border-radius: 15px;
+    width: 100%;
+}
+.seccion-perfil-info .perfil-usuario-bio {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.5rem 2rem;
+    background-color: #fff;
+    border-radius: 15px;
+    width: 100%;
+    font-size: large;
+}
+
+/* Margen entre las dos cajas y alinea el texto en las dos cajas */
+.seccion-perfil-info .perfil-usuario-bio {
+    margin-bottom: 1.65rem;
+    text-align:left;
+}
+
+/* Esto da estilo a la segunda caja, quita estilo y alinea todo */
+.seccion-perfil-usuario .lista-datos {
+    width: 50%;
+    list-style: none;
+}
+
+.seccion-perfil-usuario .lista-datos li {
+    padding: 5px 0;
+    position: relative;
+    height: 150px;
+    width: 150px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+    margin: 0 0 15px;
+    align-items: center;
+}
+
+.seccion-perfil-usuario .lista-datos li>.icono {
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+
+
+/*
+------------------------------- MODAL -------------------------------------
+*/
+
+/* Estilos para el modal */
+.perfil {
+    width: 300px;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Estilos para el fondo oscuro cuando el modal está abierto */
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos para el título del modal */
+dialog h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+dialog p{
+	font-size: small;
+}
+
+/* Botón para cambiar la foto */
+#btn-cambiar-foto {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+#btn-cambiar-foto:hover {
+    background: #0056b3;
+}
+
+/* Estilos para el input de imagen */
+#input-file {
+    display: none;
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilos para el botón de cerrar */
+#btn-cerrar-modal {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background: #ff5252;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+#btn-cerrar-modal:hover {
+    background: #d84343;
+}
+
+/* Estilos para el botón de cambiar imagen */
+.boton-avatar {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.boton-avatar:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Estilos para la imagen de perfil */
+.perfil-usuario-avatar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Estilos para el botón de guardar cambios */
+#btn-guardar-cambios {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+#btn-guardar-cambios:hover {
+    background: #388E3C;
+}
+
+/*
+----------------------------------------------------- Modal Portada -----------------------------------------------------
+*/
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    padding: 20px;
+    background: white;
+    z-index: 1000;
+    max-width: 90%;
+    width: 650px;
+	text-align: center;
+}
+
+.preview-imagen {
+    display: block;
+    margin: 10px auto;
+    width: 90%;
+    max-height: 270px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.modal p {
+	color: #555; 
+	margin-top: 10px;
+	font-size: medium;
+}
+
+/* Botón para cambiar la foto */
+#btn-elegir-portada {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+#btn-elegir-portada:hover {
+    background: #0056b3;
+}
+
+/* Estilos para el botón de cerrar */
+#btn-cancelar-portada {
+    display: block;
+    width: 40%;
+    margin-top: 15px;
+    padding: 10px;
+    background: #ff5252;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+#btn-cancelar-portada:hover {
+    background: #d84343;
+}
+
+/* Estilos para el botón de guardar cambios */
+#btn-guardar-portada {
+    display: block;
+    width: 40%;
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+#btn-guardar-portada:hover {
+    background: #388E3C;
+}
+
+/*
+----------------------------------------------------- Modal Bio -----------------------------------------------------
+*/
+
+/* Botón editar bio */
+.btn-editar-bio {
+	position: absolute;
+	right: 1rem;
+    /*margin-top: 1rem;*/
+    padding: 10px 20px;
+    background: #ffa500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-editar-bio:hover {
+    background: #cc8400;
+}
+
+#modal-editar-bio {
+	
+    padding: 20px 45px;
+    border: none;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	width: 700px;
+}
+
+#modal-editar-bio input,
+#modal-editar-bio textarea {
+    width: 100%;
+    margin: 0.5rem 0 1rem;
+    padding: 0.7rem;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#modal-editar-bio button {
+    margin-top: 10px;
+    padding: 10px;
+    width: 40%;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#guardar-bio {
+    background-color: #4CAF50;
+    color: white;
+	margin-right: 10px;
+}
+
+#cerrar-modal-bio {
+    background-color: #f44336;
+    color: white;
+    margin-left: 10px;
+}
+
+
+
+/* Estilos para el modal de edición de bio 
+.modal {
+	width: 90%;
+	max-width: 400px;
+	border: none;
+	border-radius: 8px;
+	padding: 20px;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.modal-buttons {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 15px;
+}
+.modal-buttons button {
+	margin-left: 10px;
+	padding: 8px 16px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+#btn-guardar-bio {
+	background-color: #4CAF50;
+	color: white;
+}
+#btn-cancelar-bio {
+	background-color: #f44336;
+	color: white;
+}
+
+/* ----------------------------------------------------------------------------
+
+                            Productos
+
+---------------------------------------------------------------------------- */
+
+
+/* ********************************** */
+/*       CONTENEDOR PRODUCTOS         */
+/* ********************************** */
+.div-productos {
+	background-color: var(--background-color);
+    margin: 30px;
+}
+
+.agregar-producto, .eliminar-producto {
+    padding: 10px 20px;
+    background: #ffa500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 20px;
+}
+
+/* Y solo el detalle diferente lo pones aparte */
+.agregar-producto {
+    margin-right: 50px;
+}
+
+
+.agregar-producto:hover, 
+.eliminar-producto:hover {
+    background: #dfb664;
+}
+
+.agregarEliminarProductos{
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 4px 20px rgba(20, 44, 123, 0.2);
+    margin-bottom: 15px;
+}
+
+.datos-generales{
+    width: 100%;
+    padding: 5px;
+}
+
+.datos-generales h2{
+    font-size: 26px;
+}
+
+.datos-generales p{
+    font-size: 18px;
+
+}
+
+.editar-btn{
+    height: 100%;
+    background: #ffa500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.editar-btn:hover {
+    background: #8e7746;
+}
+
+.agregarEliminarProductos {
+    border: 1px solid #ffa500;
+    border-radius: 5px;
+    position: relative;
+}
+
+.form-editar {
+    height: 100%;
+    background: #f9f9f9;
+    padding: 10px;
+    border: 1px dashed #0f4a7a;
+}
+
+.form-editar input, .form-editar textarea {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.horario{
+    margin-top: 10px;
+}
+
+.galeria-imagenes {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-grow: wrap;
+    gap: 10px;
+}
+
+
+
+
+
+/* Estilo personalizado para el botón de selección de archivo */
+.input-label {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.input-label:hover {
+    background-color: #45a049;
+}
+
+.galeria-imagenes img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* ********************************** */
+/*       MEDIA QUERIES -- 768px       */
+/* ********************************** */
+@media (max-width: 768px) {
+	html {
+		font-size: 55%;
+	}
+
+	.hero {
+		padding: 2rem;
+	}
+
+	.customer-support {
+		display: none;
+	}
+
+	.content-shopping-cart {
+		display: none;
+	}
+
+	.navbar {
+		padding: 1rem 2rem;
+	}
+
+	.navbar .fa-bars {
+		display: block;
+		color: #fff;
+		font-size: 3rem;
+	}
+
+	.menu {
+		display: none;
+	}
+
+	.content-banner {
+		max-width: 50rem;
+		margin: 0 auto;
+		padding: 25rem 0;
+	}
+
+	.container-features {
+		grid-template-columns: repeat(2, 1fr);
+		padding: 3rem 2rem;
+	}
+
+	.card-feature {
+		padding: 2rem;
+	}
+
+	.heading-1 {
+		font-size: 2.4rem;
+	}
+
+	.card-category {
+		height: 12rem;
+	}
+
+	.card-category p {
+		font-size: 2rem;
+		text-align: center;
+		line-height: 1;
+	}
+
+	.card-category span {
+		font-size: 1.4rem;
+	}
+
+	.container-options {
+		align-items: center;
+	}
+
+	.container-options span {
+		text-align: center;
+		padding: 1rem 2rem;
+	}
+
+	.container-products {
+		grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+	}
+
+	.gallery {
+		grid-template-rows: repeat(2, 15rem);
+	}
+
+	.container-blogs {
+		/*overflow: hidden;*/
+		grid-template-columns: 1fr 1fr;
+		margin: 30px;
+		/*height: 52rem;*/
+	}
+
+	.menu-footer {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.copyright {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 1.5rem;
+	}
+}
+
+/* ********************************** */
+/*       MEDIA QUERIES -- 468px       */
+/* ********************************** */
+@media (max-width: 468px) {
+	html {
+		font-size: 42.5%;
+	}
+
+	.content-banner {
+		max-width: 50rem;
+		padding: 22rem 0;
+	}
+
+	.heading-1 {
+		font-size: 2.8rem;
+	}
+
+	.card-feature {
+		flex-direction: column;
+		border-radius: 2rem;
+	}
+
+	.feature-content {
+		align-items: center;
+	}
+
+	.feature-content p {
+		font-size: 1.4rem;
+		text-align: center;
+	}
+
+	.feature-content span {
+		font-size: 1.6rem;
+		text-align: center;
+	}
+
+	.container-options span {
+		font-size: 1.8rem;
+		padding: 1rem 1.5rem;
+		font-weight: 500;
+	}
+
+	.container-products {
+		grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+		gap: 1rem;
+	}
+
+	.container-img .discount {
+		font-size: 2rem;
+	}
+
+	.content-card-product h3 {
+		font-size: 2.2rem;
+	}
+
+	.gallery {
+		grid-template-rows: repeat(2, 20rem);
+	}
+
+	.blogs {
+		padding: 2rem;
+	}
+
+	.container-blogs {
+		grid-template-columns: 1fr;
+		height: 75rem;
+	}
+
+	.content-blog h3 {
+		font-size: 2.4rem;
+	}
+
+	.content-blog span {
+		font-size: 1.8rem;
+	}
+
+	.content-blog p {
+		font-size: 2.2rem;
+	}
+
+	.btn-read-more{
+		font-size: 1.8rem;
+	}
+
+	.contact-info ul,
+	.information ul,
+	.my-account ul{
+		display: none;
+	}
+
+	.contact-info {
+		align-items: center;
+	}
+
+	.menu-footer{
+		grid-template-columns: 1fr;
+	}
+
+	.content p{
+		font-size: 1.6rem;
+	}
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PerfilUsuario</title>
+    <link rel="stylesheet" href="Estilo.css">
+    <link rel="icon" href="/PaginaUsuario/img/pabellon.jpg" type="image/png">
+    <script src="https://kit.fontawesome.com/1773049f86.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <section class="seccion-perfil-usuario">
+        <div class="perfil-usuario-header">
+            <div class="perfil-usuario-portada">
+                <div class="perfil-usuario-avatar">
+                    <img src="Perfil-Usuario.jpg" alt="img-avatar" id="img-perfil">
+                    <button type="button" class="boton-avatar" id="btn-abrir-modal">
+                        <i class="far fa-image"></i>
+                    </button>
+                    <dialog id="modal" class="perfil">
+                        <h2>Cambiar Foto de Perfil</h2>
+                        <p>Selecciona una imagen para previsualizar antes de cambiarla:</p>
+                        <br>
+                        <!-- Vista previa de la imagen -->
+                        <img src="Perfil-Usuario.jpg" id="img-preview" alt="Vista previa" class="preview-img">
+
+                        <!-- Input para subir imagen -->
+                        <button type="button" id="btn-cambiar-foto">Cambiar foto</button>
+                        <input type="file" id="input-file" accept="image/*">
+
+                        <!-- Botones de acción -->
+                        <button type="button" id="btn-guardar-cambios">Guardar cambios</button>
+                        <button type="button" id="btn-cerrar-modal">Cancelar</button>
+                    </dialog>
+                </div>
+                <!--<img src="img/banner-ej-r1.jpg" alt="img-avatar" id="">-->
+                <button type="button" class="boton-portada" id="btn-cambiar-portada">
+                    <i class="far fa-image"></i>
+                    <p></p>
+                </button>
+                <dialog id="modal-portada" class="modal">
+                    <h2>Cambiar Foto de Banner</h2>
+                    <img src="img/banner-ej-r1.jpg" id="preview-portada" class="preview-imagen"
+                        alt="Vista previa portada">
+                    <input type="file" id="input-portada" accept="image/*" style="display: none">
+                    <button id="btn-elegir-portada">Cambiar portada</button>
+                    <p>
+                        Tamaño recomendado: <strong>1200 × 350 px</strong>. Formato horizontal.
+                    </p>
+
+                    <div class="modal-buttons">
+                        <button id="btn-cancelar-portada">Cancelar</button>
+                        <button id="btn-guardar-portada">Guardar cambios</button>
+                    </div>
+                </dialog>
+
+            </div>
+        </div>
+    </section>
+
+    <!----->
+    <section class="seccion-perfil-info">
+        <div class="perfil-usuario-body">
+            <div class="perfil-usuario-bio">
+                <h3 class="titulo">Nombre del Negocio</h3>
+                <p class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore maggffedna aliqua. Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Dolore consequatur praesentium provident aliquam rerum perspiciatis sequi harum, l
+                    aboriosam itaque dolorem est fugit iure modi quaerat labore nostrum aliquid voluptatem? Eum? ipsum
+                    dolor sit amet consectetur adipisicing elit. Corporis veniam quidem repudiandae, quia excepturi
+                    vitae eaque vero et. Maiores repudiandae itaque saepe cumque consectetur quas similique deserunt
+                    placeat dolorem asperiores!</p>
+                <!-- Botón para abrir el modal -->
+                <button id="btn-editar-bio" class="btn-editar-bio">Editar Información</button>
+                <div class="horario">
+                    <h4 id="hr-asignado">Horario Asignado:</h4>
+                    <h4 id="ms-asignado">Mesa Asignada:</h4>
+                </div>
+                <!-- Modal para editar bio -->
+                <dialog id="modal-editar-bio">
+                    <h2>Editar Información</h2>
+                    <label for="input-titulo-bio">Nombre del Negocio</label>
+                    <input type="text" id="input-titulo-bio" />
+
+                    <label for="input-texto-bio">Descripción</label>
+                    <textarea id="input-texto-bio" rows="4"></textarea>
+
+                    <button id="guardar-bio">Guardar Cambios</button>
+                    <button id="cerrar-modal-bio">Cancelar</button>
+                </dialog>
+            </div>
+        </div>
+    </section>
+
+    <div class="div-productos">
+        <button class="agregar-producto">Agregar Producto</button>
+        <button class="eliminar-producto">Eliminar Producto</button>
+        <div id="agregarEliminarProductos" class="lista-productos">
+            <!-- Se agregan desde JS -->
+        </div>
+    </div>
+    <script src="Scrip(Usuario).js" type="module"></script>
+    <script src="productos.js" type="module"></script>
+</body>
+
+</html>

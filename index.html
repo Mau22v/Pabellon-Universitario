@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pabellon Digital BUAP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="icon" href="/PaginaUsuario/img/pabellon.jpg" type="image/png">
+  <link rel="stylesheet" href="styleCon.css"> <!-- Estilo principal del proyecto -->
+
+</head>
+
+<body>
+
+  <div class="navbar">
+    <h2>Visualizacion de Productos - Pabellon Universitario BUAP</h2>
+    <div class="login-container">
+      <a href="/login.html" class="btn">Inicio de Sesión</a>
+    </div>
+  </div>
+
+  <div class="container" id="mapa"></div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="cerrarModalBtn"> ❌</span>
+      <div class="info-baner">
+        <img src="/PaginaUsuario/img/blog-2.jpg" id="preview-portada" class="preview-banner" alt="Vista previa portada">
+        <img src="/PaginaUsuario/Perfil-Usuario.jpg" id="img-preview" alt="Vista previa" class="preview-perfil">
+      </div>
+
+      <div class="info-box">
+        <h3 id="rec-negocio">Nombre Negocio:</h3>
+        <p id="rec-des">Descripcion:</p>
+        <p id="rec-hr">Horario:</p>
+        <p id="rec-ub">Ubicacion:</p>
+      </div>
+      <div class="products-container" id="products-container">
+
+      </div>
+    </div>
+
+    <script src="styleCon.js" type="module"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: "Mona Sans", sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F0F4F3;
+    background-image: url('./buap.jpg');
+    background-size: cover; /* Ajusta la imagen al contenedor */
+    background-position: center; /* Centra la imagen */
+}
+
+.container{
+    width: 900px;
+    height: 510px;
+    display: flex; 
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.container-form{
+    width: 100%;
+    overflow: hidden;
+}
+
+.container-form form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    transition: transform 0.5s ease-in;
+}
+
+.container-form h2{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+/*
+.redes{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.redes ion-icon{
+    border: 1px solid grey;
+    border-radius: 25px;
+    padding: 6px;
+    cursor: pointer;
+}
+*/
+
+.container-form span{
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.inicio-sesion h2{
+    font-size: 32px;
+}
+
+.container-entradas{
+
+    width: 300px;
+    height: 30px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: #bfd1eca0;
+}
+
+input::placeholder {
+    font-size: 10px;
+}
+
+.container-entradas input{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    background-color: #bfd1eca0;
+    font-size: 10px;
+    padding: 10px;
+}
+
+.container-entradas label{
+    width: 30%;
+    font-size: 10px;
+    padding: 10px;
+}
+
+
+input[type="file"]::file-selector-button {
+    font-size: 10px; /* Tamaño del texto en el botón */
+    width: 100%;
+    background-color: inherit;
+    
+    border: none;
+
+}
+input[type="file"] {
+    color: transparent; /* Oculta el texto del archivo seleccionado */
+    width: 100%; /* Ajusta el ancho si es necesario */
+}
+
+.container-entradas input::placeholder {
+    color: black;
+    opacity: 1; /* Asegura que el color se aplique correctamente */
+}
+
+
+.container-form a{
+    color: black;
+    font-size: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.container-form button{
+    width: 200px;
+    height: 30px;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    background-color:  #bfd1eca0;
+    color: black;
+}
+
+.registro{
+    transform: translateX(-100%);
+}
+
+.container.toggle .inicio-sesion{
+    transform: translateX(100%);
+}
+
+.container.toggle .registro{
+    transform: translateX(0);
+}
+
+/*Botones Cambio*/
+
+.container-bn{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items:center;
+    transform: translateX(100%);
+    background-color: #3f6465;
+    transition: transform 0.5s ease-in-out, border-radius 0.5s ease-in-out;
+    overflow: hidden;
+    border-radius: 100% 0 0 25%;
+}
+
+.container.toggle .container-bn{
+    transform: translateX(0);
+    border-radius: 0 100% 25% 0;
+    background-color:#477678 ;
+}
+.container-bn .bn{
+    width: 100%;
+    position: absolute;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 0 px;
+    transition: transfor 0.5s ease-in-out;
+}
+
+.bn-inicio-sesion{
+    transform: translateX(100%);
+}
+ 
+.container-bn h2{
+    padding-left: 50px;
+    color: white;
+    font-size: 35px;
+}
+
+.bn-inicio-sesion h2{
+    font-size: 30px;
+    padding-right: 140px;    
+}
+
+.bn-inicio-sesion .button{
+    margin-right: 100px; /* Mueve el botón a la derecha */
+}
+
+.bn-registro .button{
+    margin-left: 50px; /* Mueve el botón a la derecha */
+}
+
+.container-bn p{
+    padding-left: 50px;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+
+.bn-inicio-sesion p{
+    font-size: 15px;
+    padding-right: 140px;    
+}
+
+.container-bn .button{
+    height: 30px;
+    width: 100px;
+    border: 1px solid #ffffff;
+    background-color: inherit;
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+
+
+.container.toggle .bn-inicio-sesion{
+    transform: translateX(0);
+}
+
+.container.toggle .bn-registro{
+    transform: translateX(-100%);
+}
+
+
+

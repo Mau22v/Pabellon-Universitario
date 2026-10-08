@@ -1,0 +1,698 @@
+@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: "Mona Sans", sans-serif;
+}
+
+body{
+    background-color: #F0F4F3;
+    min-height: 100vh;
+    display:flex;
+}
+
+li{
+    list-style: none;
+}
+
+h1{
+    font-size: 22px;
+    color: white;
+}
+
+.barra{
+    padding: 10px;
+    position: fixed;
+    background: #477678;
+    min-height: 100vh;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+}
+
+.barra span{
+    font-size: 18px;
+}
+
+.barra .logo-nombre{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu{
+    color: white;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    width: 100%;
+}
+
+.menu-item ion-icon{
+    font-size: 24px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.menu-item:hover {
+    background: white;
+    color: #477678;
+}
+
+
+.container {
+    width: 90%; 
+    margin: 0 auto; /* Centrar el contenedor */
+    margin-top: 40px;
+    margin-left: 190px;
+    padding: 20px;
+    background-color: #f8f9fa; /* Color de fondo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.container h2{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 30px;
+}
+
+.container h3{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 25px;
+}
+
+.container p{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.container .cabezera{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 85%;
+    height: 10vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
+}
+
+.user{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.btn{
+    background: #477678;
+    color: white;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    border: none;
+}
+
+
+.menu-options {
+    background-color: #477678;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 5px;
+    top: 50px;
+    position: absolute;
+    z-index: 1000;
+    right: 10px;
+}
+
+.menu-optionso {
+    background-color: #477678;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    top: 50px;
+    position: absolute;
+    z-index: 1000;
+    right: 10px;
+}
+
+.menu-options li {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    gap: 8px; 
+}
+
+.menu-optionso li {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+}
+
+.menu-options a {
+    display: flex;
+    align-items: center; 
+    color: #f7f7f7;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    gap: 8px;
+}
+
+.menu-optionso a {
+    display: flex;
+    align-items: center; 
+    color: #f7f7f7;
+    text-decoration: none;
+    padding: 0px 5px;
+    border-radius: 5px;
+    gap: 8px;
+}
+
+.menu-options ion-icon {
+    font-size: 20px;
+    color: white;
+}
+
+.menu-optionso ion-icon {
+    font-size: 20px;
+    color: white;
+}
+
+.menu-options a:hover {
+    color: #477678;
+    background: white;
+    border: 1px solid #477678;
+}
+
+.menu-optionso a:hover {
+    color: #477678;
+    background: white;
+    border: 1px solid #477678;
+}
+
+.menu-options a:hover ion-icon {
+    color: #477678;
+}
+
+.menu-optionso a:hover ion-icon {
+    color: #477678;
+}
+
+
+#admin-options{
+    display: none;
+}
+
+#admin-options-oculto{
+    display: none;
+}
+
+#admin-options-oculto2{
+    display: none;
+}
+
+
+.btn:hover{
+    color: #477678;
+    background: white;
+    border: 1px solid #477678;
+}
+
+#lista-solicitudes{
+    color: black;
+    display: flex;
+    font-size: 15px;
+    margin-bottom: 12px;
+    padding: 10px;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+.solicitud-div {
+    box-shadow: 0 4px 20px rgba(20, 44, 123, 0.2);
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.solicitud-div ion-icon{
+    width: 25px;
+    margin-top: 5px;
+    padding-right:5px;
+}
+
+.solicitud-div a{
+    text-decoration: none;
+    background-color: #4776786a; 
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    padding: 2px;
+    margin-right: auto;
+}
+
+.datos-generales{
+    width: 40%;
+    padding: 10px;
+}
+
+
+.otros-documentos{
+    width: 40%;
+    padding: 10px;
+}
+
+.div-botones{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px; /* 👈 Espacio uniforme entre botones */
+}
+
+
+.aceptar-btn{
+    border: none;
+    width: 100%;
+    height: 25px;
+    font-size: 13px;
+    background: #477678;
+    border-radius: 20px;
+    justify-content: center;
+    cursor: pointer;
+    color: #F0F4F3;
+}
+
+.aceptar-btn:hover{
+    color: #477678;
+    background: white;
+    border: 1px solid #477678;
+}
+
+.rechazar-btn{
+    border: none;
+    width: 100%;
+    height: 25px;
+    font-size: 13px;
+    background: #477678;
+    border-radius: 20px;
+    justify-content: center;
+    cursor: pointer;
+    color: #F0F4F3;
+}
+
+.rechazar-btn:hover{
+    color: #477678;
+    background: white;
+    border: 1px solid #477678;
+}
+
+.num-activos{
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+    box-shadow: 0 8px 24px rgba(20, 44, 123, 0.35); /* sombra más intensa */
+    background-color: #477678;
+}
+
+.pendientes{
+    box-shadow: 0 8px 24px rgba(20, 44, 123, 0.35); /* sombra más intensa */
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+    margin-left: 5%;
+    background-color: #477678;
+}
+
+.pendientes ion-icon{
+    margin-left: 10px;
+    font-size: 100px;
+    color: #ffffff;
+ }
+
+ .pendientes h3{
+    color: #ffffff;
+    font-size: 15px;
+    padding: 25px;
+    margin-top: 15px;
+ }
+ 
+ .pendientes span{
+    color: #dedede;
+     font-size: 15px;
+     padding: 25px;
+  }
+
+.not{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.num-activos h3{
+    color: #F0F4F3;
+   font-size: 15px;
+   padding: 25px;
+   margin-top: 15px;
+}
+
+.num-activos span{
+    color: #F0F4F3;
+    font-size: 15px;
+    padding: 25px;
+ }
+
+ .num-activos ion-icon{
+    margin-left: 10px;
+    color: #F0F4F3;
+    font-size: 100px;
+ }
+
+/*Solicitudes oculto*/
+#container-solicitudes, #container-activos {
+    padding: 15px;
+    background: #f8f9fa;
+    width: 90%; 
+    margin: 0 auto; /* Centrar el contenedor */
+    margin-left: 190px; /* Se alinea después de la barra lateral */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: black; /* Para que el texto sea visible en el fondo negro */
+ 
+}
+.cabezera-oculto{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 85%;
+    height: 10vh;
+    display: flex;
+    background: white;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
+    
+}
+
+.evaluar{
+    padding-left: 10px;
+}
+
+.user-oculto{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    padding-right: 10px;
+    padding-left: 10px;    
+}
+
+.btn-oculto{
+    background: #477678;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-oculto:hover{
+    color: #477678;
+    background: white;
+    border: 2px solid #477678;
+}
+
+#container-solicitudes h2{
+    padding-top: 60px;
+    font-size: 28px;
+}
+
+#container-solicitudes ul{
+    padding: 15px;
+}
+
+.oculto{
+    display: none; 
+}
+
+.oculto h2{
+    font-size: 28px;
+}
+
+#container-activos h2{
+    padding-top: 60px;
+    font-size: 28px;
+}
+
+#container-activos {
+    padding-left: 20px;
+}
+
+#lista-activos{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contenedor-activos {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px; 
+    box-shadow: 0 4px 20px rgba(63, 73, 100, 0.2);
+    padding: 10px;
+    border-radius: 10px; /* Opcional: bordes redondeados */
+    background-color: #f9f9f9; /* Opcional: fondo blanco */
+}
+
+.solicitud{
+    width: 50%;
+    padding: 10px;
+}
+
+.solicitud p{
+    padding-bottom: 6px;
+}
+
+.solicitud ion-icon{
+    padding-right: 10px;
+}
+
+.acciones{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 10px;
+}
+
+.acciones label{
+    padding-right: 5px;
+}
+
+.acciones input{
+    margin-top: 5px;
+}
+
+.acciones button{
+    margin-top: 10px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    padding: 2px;
+    background-color:  #bfd1eca0;
+}
+
+
+
+
+/* --- Responsividad con media queries --- */
+
+/* Para pantallas menores a 900px */
+@media (max-width: 900px) {
+    .barra {
+        width: 50px;
+    }
+
+    .menu-item {
+        justify-content: center;
+    }
+
+    .menu-item .texto {
+        display: none; /* Oculta el texto */
+    }
+
+    .menu-item ion-icon {
+        margin-right: 0;
+    }
+
+    .container {
+        margin-left: 60px;
+        width: calc(100% - 60px);
+    }
+
+    .container .cabezera {
+        width: calc(100% - 60px);
+    }
+
+    .logo-nombre h1{
+        display: none;
+    }
+    
+    .container {
+        margin-left: 50px;
+        width: calc(100% - 50px);
+    }
+
+    #container-solicitudes, #container-activos{
+        margin-left: 50px;
+        width: calc(100% - 50px);
+    }
+
+
+
+
+}
+
+/* Para pantallas menores a 600px */
+@media (max-width: 770px) {
+    .barra {
+        width: 50px;
+    }
+
+    .menu-item {
+        justify-content: center;
+    }
+
+    .menu-item .texto {
+        display: none; /* Oculta el texto */
+    }
+
+    .menu-item ion-icon {
+        margin-right: 0;
+    }
+
+    .logo-nombre h1{
+        display: none;
+    }
+
+    .container {
+        margin-left: 50px;
+        width: calc(100% - 50px);
+    }
+
+    .container .cabezera {
+        width: calc(100% - 50px);
+    }
+
+
+    #container-solicitudes, #container-activos{
+        margin-left: 50px;
+        width: calc(100% - 50px);
+    }
+
+
+
+    /* Reducir tamaño de los iconos */
+    .num-activos ion-icon, 
+    .pendientes ion-icon {
+        font-size: 70px;
+    }
+
+    /* Reducir márgenes y padding */
+    .num-activos h3, 
+    .pendientes h3, 
+    .num-activos span, 
+    .pendientes span {
+        font-size: 10px;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .not {
+        display: flex;
+        flex-direction: row;
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .solicitud-div {
+        flex-direction: column; 
+    }
+
+    .datos-generales{
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .div-botones{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center; 
+        justify-content: space-between; 
+    }
+
+    .otros-documentos{
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .solicitud-div ion-icon {
+        font-size: 10px;    
+    }
+
+    .solicitud-div a {
+        font-size: 8px; /* Fuente más pequeña en móvil */
+        margin-left: 0;
+        margin-top: 5px;
+       
+        text-align: center; 
+    }
+
+    #lista-solicitudes {
+        font-size: 10px; /* Ajustar fuente del contenedor */
+        padding: 8px;
+        
+    }
+
+    .contenedor-activos{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .solicitud{
+        width: 100%;
+    }
+
+    .acciones{
+        width: 100%;
+    }
+}

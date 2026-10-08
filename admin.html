@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administrador</title>
+    <link rel="stylesheet" href="/admin.css">
+    <link rel="icon" href="/PaginaUsuario/img/pabellon.jpg" type="image/png">
+
+</head>
+<body>
+    <div class="barra">
+        <div class="logo-nombre">
+            <h1>PabellonAdmin</h1>
+        </div>
+        <div class="menu">
+            <div class="menu-item" id="inicio-btn">
+                <ion-icon name="home-outline"></ion-icon>
+                <span class="texto">Inicio</span>
+            </div>
+            <div class="menu-item" id="solicitudes-btn">
+                <ion-icon name="checkmark-done-outline"></ion-icon>
+                <span class="texto">Evaluar Solicitudes</span>
+            </div>
+            <div class="menu-item" id="activos-btn">
+                <ion-icon name="list-outline"></ion-icon>
+                <span class="texto">Lista de Vendedores Activos</span>
+            </div>
+        </div>
+    </div>
+
+   <div id= "container-inicio" class="container">
+    <h2>Bienvenido a tu Panel de Administrador!</h2>
+    <p>Aquí podrás llevar a cabo las funciones esenciales para gestionar el 
+        <strong>Pabellón Universitario</strong> de forma digital, rápida y eficiente.</p>
+    <h3>¿Qué puedes hacer desde este panel?</h3>
+           <p>📋 Evaluar las solicitudes de nuevos vendedores.</p>
+           <p>📅 Asignar horarios y ubicaciones dentro del pabellón.</p>
+
+        <div class="not">
+            <div class="num-activos">
+                <ion-icon name="people-circle-outline"></ion-icon>
+                <h3>Lista de Vendedores Activos: <span id="contador-activos">0</span></h3>
+            </div>
+            <div class="pendientes">
+                <ion-icon name="notifications-circle-outline"></ion-icon>
+                <h3>Evaluar Solicitudes: <span id="contador-pendientes">0</span></h3>
+            </div>
+        </div>
+           
+        <div class="cabezera">
+            <div class="user">
+                <button id="admin-menu" class="btn"><ion-icon name="person-outline"></ion-icon></button>
+                <div id="admin-options" class="menu-options">
+                    <ul>
+                        <li><a href="./index.html"><ion-icon name="enter-outline"></ion-icon>Cerrar Sesión</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+   </div> 
+
+    <div id="container-solicitudes" class="oculto">
+        <div class="cabezera-oculto">
+            <div class="user-oculto">
+                <button id="admin-menu-oculto" class="btn"><ion-icon name="person-outline"></ion-icon></button>
+                <div id="admin-options-oculto" class="menu-optionso">
+                    <ul>
+                        <li><a href="./index.html"><ion-icon name="enter-outline"></ion-icon>Cerrar Sesión</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <h2 class="evaluar">Evaluar Solicitudes</h2>
+        <div id="lista-solicitudes"></div>  
+    </div>
+
+    <div id="container-activos" class="oculto">
+        <div class="cabezera-oculto">
+            <div class="user-oculto">
+                <button id="admin-menu-oculto2" class="btn"><ion-icon name="person-outline"></ion-icon></button>
+                <div id="admin-options-oculto2" class="menu-optionso">
+                    <ul>
+                        <li><a href="./index.html"><ion-icon name="enter-outline"></ion-icon>Cerrar Sesión</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <h2>Lista de Vendedores Activos</h2>
+        <div id="lista-activos">
+        </div>    
+    </div>
+
+    <script src="/admin.js"></script>
+    <script type="module" src ="/listaActivos.js"></script>
+    <script type="module" src="/adminLista.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/PaginaUsuario/img/pabellon.jpg" type="image/png">
+</head>
+<body>
+   
+    <div class="container">
+        <div class="container-form">
+            <form class="inicio-sesion">
+                <h2>Inicio de Sesión</h2>
+                <span>Accede al Pabellón Digital</span>
+                <div class="container-entradas">
+                    <input type="text" placeholder="Correo:" id="correoi">
+                </div>
+                <div class="container-entradas">
+                    <input type="password" placeholder="Contraseña:" id="contraseñai">
+                </div>
+
+                <a id = "olvidaste-contrasena" href="#">¿Olvidaste tu contraseña?</a>
+                <button id="login">Iniciar Sesion</button>
+            </form>
+        </div>
+        <div class="container-form">
+            <form class="registro">
+                <h2>Registrarse</h2>
+                <div class="container-entradas">
+                    <input type="text" placeholder="Correo:" id="correo">
+                </div>
+                <div class="container-entradas">
+                    <input type="password" placeholder="Contraseña:" id="contraseña">
+                </div>
+                <div class="container-entradas">
+                    <input type="text" placeholder="Matricula:" id="matricula">
+                </div>
+                <div class="container-entradas">
+                    <input type="text" placeholder="Nombre Completo:" id="nombre">
+                </div>
+                <div class="container-entradas">
+                    <label for="archivo">Kardex</label>
+                    <input type="file" name="archivo" id="cardex" accept="application/pdf, image/jpeg, image/png">
+                </div>
+                <div class="container-entradas">
+                    <label for="archivo">Horario</label>
+                    <input type="file" name="archivo" id="horario" accept="application/pdf, image/jpeg, image/png">
+                </div>
+                <div class="container-entradas">
+                    <label for="archivo">Poliza</label>
+                    <input type="file" name="poliza" id="poliza" accept="application/pdf, image/jpeg, image/png">
+                </div>
+                <div class="container-entradas">
+                    <label for="archivo">Credencial Estudiante</label>
+                    <input type="file" name="poliza" id="credencial" accept="application/pdf, image/jpeg, image/png">
+                </div>
+                <div class="container-entradas">
+                    <label for="archivo">Carta de Motivos</label>
+                    <input type="file" name="poliza" id="carta" accept="application/pdf, image/jpeg, image/png">
+                </div>
+                <div class="container-entradas">
+                    <label for="archivo">Acept. del Reglamento</label>
+                    <input type="file" name="poliza" id="reglamento" accept="application/pdf, image/jpeg, image/png">
+                </div>
+
+
+                <button id="registro">Registrarse</button>
+            </form>           
+        </div>
+
+        <div class="container-bn">
+            <div class="bn-inicio-sesion bn">
+                <h2>Hola de Nuevo</h2>
+                <p>Inicia Sesión en Pabellón Digital</p>
+                <button class="button" id="btn-inicio-sesion">Inicio de Sesion</button>
+            </div>
+            <div class="bn-registro bn">
+                <h2>Bienvenido</h2>
+                <p>Registrate en Pabellon Digital Utilizando tu Correo</p>
+                <button class="button" id="btn-registrate">Registrarse</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+    <script type="module" src="/registro.js"></script>
+    <script type="module" src="/inicioSesion.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

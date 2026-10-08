@@ -13,7 +13,7 @@ Plataforma web diseñada para optimizar la gestión, registro y aprobaciones adm
 
 **Frontend:**
 * HTML5 & CSS3
-* Vanilla JavaScript (ES6+)
+* Vanilla JavaScript 
 
 **Backend & Servicios (BaaS):**
 * Firebase Authentication
@@ -26,10 +26,8 @@ Si deseas correr este proyecto en tu entorno local, sigue estos pasos:
 1. Clona este repositorio:
    ```bash
    git clone [https://github.com/Mau22v/Pabellon-Universitario.git](https://github.com/Mau22v/Pabellon-Universitario.git)
+<img width="935" height="410" alt="Captura de pantalla 2026-10-07 185127" src="https://github.com/user-attachments/assets/2851261d-7c83-435c-a887-3cb3b27a326e" />
 
 
-   <img width="952" height="416" alt="Captura de pantalla 2026-10-07 183507" src="https://github.com/user-attachments/assets/2ed8c90b-9037-43cc-91ae-ead88e5280a6" />
-
-   <img width="941" height="413" alt="Captura de pantalla 2026-10-07 183615" src="https://github.com/user-attachments/assets/f71ef543-8347-47c6-b9ca-1104019ce922" />
    
 
